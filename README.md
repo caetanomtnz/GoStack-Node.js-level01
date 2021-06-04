@@ -1,6 +1,6 @@
 # Desafio-Back-end-com-Node.js
 
-## ## Técnicas de Aprendizado
+## Técnicas de Aprendizado
 
 - Aprendizado é um processo e você não vai conseguir ser um expert em uma semana
 - Não pule etapas
