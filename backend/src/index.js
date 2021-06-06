@@ -1,9 +1,9 @@
 const express = require('express');
 const cors = require('cors');
-const { v4: uuidv4 } = require('uuid')
-const { isUuid } = require('uuidv4')
+const { v4: uuidv4 } =require('uuid')
+const { isUuid } =require('uuidv4')
 
-const app = express();
+const app =express();
 
 app.use(cors())
 app.use(express.json())
@@ -11,9 +11,9 @@ app.use(express.json())
 const projects = []
 
 function logRequests(req, res, next) {
-  const { method, url } = req
+  const { method, url } =req
 
-  const logLabels = `[${method.toUpperCase()}] ${url}`
+  const logLabels =`[${method.toUpperCase()}] ${url}`
 
   console.time(logLabels)
 
@@ -35,11 +35,11 @@ function validateProjectId(req, res, next) {
 app.use(logRequests)
 app.use('/projects/:id', validateProjectId)
 
-app.get('/projects', (req, res) => {
+app.get('/projects', (req, res)=> {
   const { title } = req.query;
 
   const results = title
-  ? projects.filter(project => project.title.includes(title))
+  ? projects.filter(project=> project.title.includes(title))
   : projects;
 
   return res.json(results)
@@ -48,21 +48,21 @@ app.get('/projects', (req, res) => {
 app.post('/projects', (req, res) => {
   const { title, owner } = req.body
 
-  const project = { id: uuidv4(), title, owner }
+  const project ={ id: uuidv4(), title, owner }
 
   projects.push(project)
 
   return res.json(project)
 })
 
-app.put('/projects/:id', (req, res) => {
+app.put('/projects/:id', (req, res)=> {
   const { id } = req.params
   const { title, owner } = req.body
 
-  const projectIndex = projects.findIndex(project => project.id === id)
+  const projectIndex = projects.findIndex(project=> project.id === id)
 
   if (projectIndex < 0) {
-    return res.status(400).json({ error: 'Projeto not found' })
+    return res.status(400).json({ error: 'Project not found' })
   }
 
   const project = {
@@ -71,9 +71,9 @@ app.put('/projects/:id', (req, res) => {
     owner
   }
 
-  projects[projectIndex] = project
+  projects[projectIndex]=project
 
-  return res.json(project)
+return res.json(project)
 })
 
 app.delete('/projects/:id', (req, res) => {
@@ -82,12 +82,12 @@ app.delete('/projects/:id', (req, res) => {
   const projectIndex = projects.findIndex(project => project.id === id)
 
   if (projectIndex < 0) {
-    return res.status(400).json({ error: 'Projeto not found' })
+return res.status(400).json({ error: 'Project not found' })
   }
 
   projects.splice(projectIndex, 1)
 
-  return res.status(204).send()
+return res.status(204).send()
 })
 
 
