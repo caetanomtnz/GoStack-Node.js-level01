@@ -3,7 +3,13 @@ const express = require('express');
 
 const app = express();
 
-app.get('/projects', (request, response) => { 
+app.use(express.json());
+
+app.get('/projects', (request, response) => {
+   const {title, owner} = request.query;
+
+   console.log(owner)
+   console.log(title)
     return response.json([
         'Projeto 1',
         'Projeto 2',
@@ -11,7 +17,13 @@ app.get('/projects', (request, response) => {
 });
 
 app.post('/projects', (request, response)=>{
-   return response.json([
+  const {title, owner} = request.body
+
+  console.log(owner);
+  console.log(title);
+
+  
+    return response.json([
     'Projeto 1',
     'Projeto 2',
     'Projeto 3',
@@ -19,6 +31,10 @@ app.post('/projects', (request, response)=>{
 });
 
 app.put('/projects/:id', (request, response)=>{
+    const { id } = request.params
+
+    console.log(params)
+    
     return response.json([
      'Projeto 2',
      'Projeto 3',
