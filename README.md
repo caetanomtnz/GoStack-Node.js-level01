@@ -1,12 +1,10 @@
-<h1 align="center"> Módulo de NodeJS - nível 1 </h1>
+<h1 align="center"> Módulo de NodeJS - nível 01 </h1>
  &nbsp;
  
-<h3 align="center">🔍 Navegue por dentro do Readme </h3>
+<h3 align="center">🔍 Navegue por dentro do README </h3>
 <p align="center">
   <a href="#-tecnologias">🚀 Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-projeto">💻 Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-licença">📝 Licença</a>
-  <a href="#-creditos">⚡ Creditos</a>
 </p>
 
 <br>
@@ -24,12 +22,4 @@
 Este é um dos módulos do Gostack, que tem como objetivo passar conhecimentos sobre NodeJs onde cria uma api de cadastros de projetos.
 
 
-## 📝 Licença
-
-
-Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
-
-
-## ⚡ Creditos
-
-### Feito com muito ❤️ e ☕ por Caetano Martinazzo
+## Feito com muito ❤️ e ☕ por Caetano Martinazzo
