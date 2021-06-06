@@ -1,7 +1,7 @@
 ## NODE & YARN
 
 ### [Instalando Node](https://nodejs.org/dist/v14.17.0/node-v14.17.0-x64.msi)
-
+ 
 ### [Instalando o Yarn](https://classic.yarnpkg.com/latest.msi)
 
 
